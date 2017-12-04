@@ -10,7 +10,7 @@ fs.readdir(inputDirectory, (err, files) => {
                 return console.log(err);
             }
             const result = toMarkdown(data);
-            fs.writeFile(`${outputDirectory}/${file}`, result, function (err) {
+            fs.writeFile(`${outputDirectory}/${file}.md`, result, function (err) {
                 if (err) {
                     return console.log(err);
                 }
